@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bmi calculatur use funtion</title>
+</head>
+<body>
+    <button onclick="bmi()">click</button>
+    <script>
+      function bmi(){
+        let a = '';
+while(a === null || a === ''){
+  a = prompt("can you share your height")
+}
+let b = '';
+while(b === null || b === ''){
+  b = prompt("can you share your weight")
+}
+let height =a;
+let weigth =b;
+let conv =height/100;
+let res =conv*conv;
+let bmi =weigth/res;
+console.log(bmi);
+
+if(bmi <=18.5 && bmi >=16){
+    document.write("you are underweight");
+}else if (bmi <= 25 && bmi >=18.5){
+    document.write("you are normal");
+}else if (bmi <=30 && bmi >=25){
+    document.write("you are overweight");
+}else if(bmi <=35 && bmi >=30){
+    document.write("you are Obesity")
+}else{
+    document.write("sorry this not working please try again leiter");
+}
+
+      }
+   
+
+    </script>
+</body>
+</html>
