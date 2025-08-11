@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="start()">start</button>
+    <p id="counter">0000</p>
+    <button onclick="stop()">stop</button>
+
+    <button onclick="clearn()">clear</button>
+    <script>
+
+    let count = 0;
+    let timer;
+function counter(){
+  timer = setInterval(() => {
+    document.getElementById('counter').innerHTML = count;
+    count = count + 1;
+}, 600);
+}
+
+function start(){
+    counter();
+}
+function stop(){
+    clearTimeout(timer);
+    
+}
+
+function clearn() {
+    count = 0;
+    document.getElementById('counter').innerHTML = count;
+     
+}
+    </script>
+</body>
+</html>
